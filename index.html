@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="./styles/output.css"/>
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+   <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center" >
+
+
+
+    <div class="w-full h-full flex flex-col justify-center items-center" >
+        
+
+<div class="md:text-">Conheça os nossos Apartamentos</div>
+
+
+        <img src="./assets/fantasy.jpg" alt="logo" class="h-32 w-36 rounded-full shadow-1g hover:scale-110 duration-200"/>
+    <h1 class="text-3xl mt-4 mb-2 font-bold">Imoveis Dev</h1>
+    <span class="text-white font-medium" > Rua Celso Garcia 410, São Paulo - SP</span>
+    <div class="bg-green-500 px-4 py-1 rounded-lg mt-5"> Seg a Dom - 18:00 as 22:00</div>
+    </div>
+   </header>
+   <div class="m-3" id="menu">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 px-2 mb-16 mx-auto max-w-7xl">
+        <div class="flex gap-2" >
+<img src="./assets/apt03.jpeg"
+alt="apto02"
+class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
+<div>
+    <p class="font-bold">Ap Tatuapé 120m</p>
+    <p class="text-sm">Avenida Serra de Jureia 900 , Gomes Cardim </p>
+    <div class="flex items-center gap-2 justify-between mt-3">
+       <h1 class="font-bold text-lg">R$ 3.000.000,00</h1> 
+        <button class="bg-gray-400 px-5 rounded add-to-cart-btn"
+        data-name="ApTatuape120m"
+        data-price="2.000.000,00"
+        data-address="Avenida Serra de Jureia 900 , Gomes Cardim"
+        >
+             <i class="fa fa-cart-plus text-lg text-black"></i>
+        </button>
+    </div>
+</div>    
+</div>
+<div class="flex gap-2 " >
+    <img src="./assets/apt02.webp"
+    alt="apto02"
+    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
+    <div>
+        <p class="font-bold">Ap Tatuapé 80m</p>
+        <p class="text-sm">Avenida Serra de Japi 302 , Gomes Cardim </p>
+        <div class="flex items-center gap-2 justify-between mt-3">
+           <h1 class="font-bold text-lg">R$ 2.000.000,00</h1> 
+            <button class="bg-gray-400 px-5 rounded add-to-cart-btn"
+            data-name="ApTatuape80m"
+            data-price="2.000.000,00"
+            data-address="Avenida Serra de Japi 302 , Gomes Cardim"
+            >
+                 <i class="fa fa-cart-plus text-lg text-black"></i>
+            </button>
+        </div>
+    </div>    
+    </div>
+
+<div>
+    <h1> Casas </h1>
+    <div class="flex gap-2">
+        <img src="./assets/casa1.jpeg" alt="casa1" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
+<div>
+    <p class="font-bold">Casa Granja Vianna 320m</p>
+    <p claass="text-sm"> Av São Camilo 1320</p>
+    <div class="flex items-center gap-2 justify-between mt-3">
+        <h1 class="font-bold text-lg">R$ 5.500.000,00</h1>
+        <button class="bg-gray-400 px-5 rounded add-to-cart-btn"
+        data-name="CasaGranjaVianna320"
+        data-price="5.500.000,00"
+        data-address="Av São Camilo 1320"
+        >
+             <i class="fa fa-cart-plus text-lg text-black"></i>
+        </button>
+
+    </div>
+</div>    
+    </div>
+</div>
+
+</main>
+
+   </div>
+   <div class="bg-black/70 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-cente" 
+   id="cart-modal">
+    <div class=" bg-slate-400 rounded-md min-w-[90%] flex items-center justify-center md:min-w-[600px] ">
+        
+    <div id="cart-items" class="flex justify-between mb-2 flex-col">
+        <p class="font-bold">Lista de interesses:<span id="cart-total"></span></p>
+        
+        <div class="flex items-center justify-between mt-5 w-full" >
+            <button id="close-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Voltar</button>
+            <button id="finalizar-btn" class="bg-green-500 text-white px-2 py-1 rounded">Confirmar</button>
+        </div>
+    </div>
+    </div>
+   </div>
+   <footer class="w-full z-40 py-2 fixed bottom-0 bg-blue-500 flex items-center justify-center ">
+    <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+    (<span id="cart-count">0</span>) <p class="">lista de interesses</p>
+    <i class="fa fa-cart-plus text-lg text-white "></i>
+    </button>
+ </footer>
+<script src="script.js"></script>
+</body>
+</html>
